@@ -24,13 +24,13 @@ describe( 'GET /episode1Species', () => {
     it( 'should return correct array from handler', () => {
         returnedVal.should.be.an.Array();
 
-        // From manual testing of the swapi, these are the twenty species for Episode 1: The Phantom Menace
-        returnedVal.length.should.equal( 20 );
+        // From manual testing of the swapi, there are six different species classification for Episode 1: The Phantom Menace
+        returnedVal.length.should.equal( 6 );
 
-        // Rather than checking for all 20 specific species, I'm going to be looking for two specific ones: Zabrak (species 22) and Human (species 1)
+        // Rather than checking for all 6 specific species classifications, I'm going to be looking for two specific ones.
         returnedVal.should.containDeep( [
-            'https://swapi.dev/api/species/1/',
-            'https://swapi.dev/api/species/22/'
+            'mammal',
+            'unknown'
         ] );
     } );
 } );
