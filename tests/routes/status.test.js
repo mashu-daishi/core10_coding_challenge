@@ -21,7 +21,7 @@ describe( 'GET /status', () => {
         route.route.should.equal( '/status' );
     } );
 
-    it( 'should return correct object in handler', () => {
+    it( 'should return correct object from handler', () => {
         returnedVal.should.be.an.Object();
         returnedVal.should.have.property( 'packageName' );
         returnedVal.should.have.property( 'packageVersion' );
