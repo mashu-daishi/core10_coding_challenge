@@ -12,6 +12,7 @@ module.exports = {
 			// Calling the swapi utility to get a list of all the planets
 			const allPlanets = await util.getAllFromPath( 'https://swapi.dev/api/planets' );
 				
+			// Some planets have a population listed as "unknown". We will not be including these in the total population
 			allPlanets.forEach( planet => {
 				if ( planet.population !== 'unknown' ) {
 					returnTotal = returnTotal + Number( planet.population );

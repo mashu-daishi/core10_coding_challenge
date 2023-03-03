@@ -17,7 +17,7 @@ module.exports = {
 			// Calling the swapi utility to get a list of all the species
 			const allSpecies = await util.getAllFromPath( 'https://swapi.dev/api/species' );
 	
-			
+			// We're going to assume what was wanted is a list of all the species
 			allSpecies.forEach( species => {
 				if ( species.films && _.includes( species.films, episode1Film ) ) {
 					returnList.push( species.url );
